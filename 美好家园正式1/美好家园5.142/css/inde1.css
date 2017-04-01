@@ -1,0 +1,312 @@
+/*<!--LYL  2017.2.22 第一版  对应首页的CSS-->*/
+.Yhead{
+	width: 100%;
+	height:0.88rem;
+	background: #1ddd83;
+	overflow: hidden;
+}
+.nav1{
+	width: 3.25rem;
+	height: 0.28rem;
+	font-size: 0.28rem;
+	float: right;
+	overflow: hidden;
+	margin-top: 0.3rem;
+}
+.nav1 li a{
+	color: #c8ecdb;
+}
+
+.nav1 li{
+	float: left;
+	height: 0.28rem;
+	border-left:1px solid #fff;
+	
+	line-height: 0.28rem;
+	padding:0 0.14rem;
+}
+.nav1 .imss{
+	width: 0.28rem;
+	height: 0.28rem;
+	/*background: #000;*/
+}
+.nav1 .we{
+	color: #fff;
+}
+.Yhead .mh{
+	width: 1.89rem;
+	height: 0.64rem;
+	float: left;
+	margin: 0.1rem 0 0 0.2rem;
+}
+/*导航栏切换css*/
+.tabs{height:0.88rem;}
+.tabs a{/*float:left;width:14.2%;color:#333;*/text-align:center;font-size:0.28rem;text-decoration:none;}
+.tabs .active {
+	border-bottom:0.03rem solid #1ddd83;
+}
+.clseo{
+	color:#1ddd83;
+}
+.swiper-container  {height:auto}
+.swiper-container{border-radius:0 0 0.05rem 0.05rem;width:100%;border-top:0;}
+.swiper-slide{width:100%;background:none;}
+.content-slide{font-size: 0.26rem;width: 100%}
+ 
+.swiper-slide-active { height:auto}
+/*消息完毕*/
+.L-head{
+	position:relative;
+	font-size: 0.26rem;
+}
+.L-head,.ims{
+	width: 100%;
+	height: 3.6rem;
+}
+.ims{
+	position: absolute;
+	z-index: 6;
+}
+.ims a{
+	display: inline-block;
+	width: 100%;
+	height: 3.6rem;
+	position: absolute;
+	display: none;
+}
+.xians{
+	position: absolute;
+	bottom: 0rem;
+	width: 100%;
+	height: 0.8rem;
+	background: #000;
+	opacity: 0.5;
+	z-index: 9;
+}
+.ims img{
+	width: 100%;
+	height: 3.6rem;
+}
+.ims .show{
+	display: block;
+}
+input{outline:medium;}
+.sous{
+	position: absolute;
+	z-index: 8;
+	top: 0.56rem;
+	left: 0.5rem;
+	width: 5.4rem;
+	height: 0.58rem;
+	background:#fff;
+	opacity: 0.7;
+	border:0px;
+	border-radius: 0.5rem;
+	text-align: center;
+}
+.ims{
+	position: absolute;
+	
+}
+.nav{
+	width: 1.1rem;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0.35rem;
+	right: 0.9rem;
+	z-index: 10;
+}
+.jianj{
+	/*width:2.5rem;*/
+	color: #f0f0f0;
+	font-size: 0.28rem;
+	position: absolute;
+	bottom:0.26rem;
+	left: 0.2rem;
+	z-index: 50;
+}
+.nav li{
+	width: 0.12rem;
+	height: 0.12rem;
+	background: #fff;
+	border-radius:50%;
+	float:left;
+	opacity: 0.7;
+	margin-left:0.1rem;
+}
+.nav .ff{
+	opacity: 1;
+}
+/********头部滚动结束头条部分***********************************/
+.tou{
+	width: 100%;
+	overflow: hidden;
+	padding: 0.3rem 0 0.25rem 0;
+	border-bottom: 0.1rem solid #f0f0f0;
+}
+
+.tou .tou1 {
+	float: left;
+	width: 0.63rem;
+	height: 0.42rem;
+	margin: 0 0.22rem;
+}
+.xinxi{
+	width: 4.9rem;
+	height: 0.32rem;
+	font-size: 0.26rem;
+	overflow: hidden;
+	float: left;
+}
+.xinxi li{
+	height: 0.32rem;
+	width: 4.9rem;
+	/*display: none;*/
+}
+/**直播部分*/
+.zhibo{
+	width: 100%;
+	padding: 0.15rem 0;
+	border-bottom: 0.1rem solid #ccc;
+	overflow: hidden;
+}
+.zhibo .ds{
+	width: 1.05rem;
+
+	float: left;
+	margin: 0 0.27rem;
+	text-align: center;
+}
+.zhibo a{
+	font-size: 0.26rem;
+	display: inline-block;
+}
+.zhibo img{
+	width: 0.8rem;
+	height: 0.8rem;
+}
+/**预播**/
+.us li{
+	/*width: 100%;*/
+	overflow: hidden;
+	padding: 0.2rem;
+	padding-bottom: -0.2rem;
+	border-bottom: 0.02rem solid #f0f0f0;
+}
+
+.vi{
+float: left;
+position: relative;
+
+}
+.vi,.Lim{
+	width: 2.6rem;
+	height: 1.3rem;
+}
+.Lzb{
+	width: 2.6rem;
+	height: 0.36rem;
+	position: absolute;
+	bottom: 0rem;
+	background: rgba(0,0,0,0.5); 
+	line-height: 0.36rem;
+}
+.Lzb img{
+	width: 0.14rem;
+	height: 0.17rem;
+	margin-left:0.1rem;
+}
+.Lzb span{
+	font-size: 0.22rem;
+	color: #fff;
+	margin-left:0.14rem;
+	
+}
+.lzbr{
+	float: left;
+	margin-left: 0.2rem;
+	width: 3.2rem;
+}
+.lzbr .fz{
+	width: 3rem;
+	height: 0.72rem;
+	font-size: 0.26rem;
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	
+}
+.lzbr .laiy{
+	margin-top: 0.1rem;
+	overflow: hidden;
+}
+.lzbr .laiy span{
+	font-size: 0.24rem;
+	color:#999999;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	float: left;
+	width: 2.3rem;
+}
+.lzbr .laiy img{
+	width: 0.9rem;
+	height: 0.36rem;
+	vertical-align: middle;
+	float: right;
+}
+.linps{
+	text-align: center;
+	padding: 0.2rem 0;
+	font-size: 0.28rem;
+	
+}
+
+/*地步下载页*/
+.xiaz{
+	width:100%;
+	height: 0.98rem;
+	background:rgba(0,0,0,0.8);
+	position: fixed;
+	bottom: 0rem;
+	z-index: 80;
+	line-height: 0.98rem;
+}
+.col{
+	background: #ffcb66;
+}
+.xiaz img{
+	float: left;
+}
+.xiaz .cha{
+	width: 0.33rem;
+	height: 0.33rem;
+	margin: 0.325rem;
+	
+}
+.xiaz .logo1{
+	width: 2.18rem;
+	height: 0.69rem;
+	margin: 0.145rem;
+}
+.xiaz span{
+	display: inline-block;
+	width: 1.10rem;
+	height: 0.5rem;
+	
+	font-size: 0.28rem;
+	text-align: center;
+	background:#2cc17b;
+	float: right;
+	line-height: 0.5rem;
+	border-radius: 0.05rem;
+	margin: 0.24rem;
+}
+.xiaz span a{
+	color: #fff;
+}
+
+

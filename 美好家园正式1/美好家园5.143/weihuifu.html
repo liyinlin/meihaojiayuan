@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>美好家园</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/gongyou.css"/>
+		<link rel="stylesheet" type="text/css" href="css/wenda.css"/>
+		<link rel="stylesheet" type="text/css" href="css/kuaisuwendaxiangqing.css"/>
+		<link rel="stylesheet" type="text/css" href="css/yiguanbi.css"/>
+		<style type="text/css">
+			.dotai_1{
+				width: 100%;
+				height: 2rem;
+				float: left;
+			}
+			.dotai_2{
+				width: 48%;
+				height: 2rem;
+				float: left;
+				margin-left: 0.1rem;
+			}
+			.dotai_3,.dotai_4,.dotai_5,.dotai_6{
+				width: 32%;
+				height: 2rem;
+				float: left;
+				margin-left: 0.07rem;
+				margin-top: 0.05rem;
+			}
+			.lypss{
+				padding-bottom:0.1rem ;
+			}
+			.clgb{
+				font-size: 0.28rem;
+				text-align: center;
+				padding: 0.1rem 0;
+				background: #F0F0F0;
+				color: #999999;
+				margin-top: 0.8rem;
+			}
+			#l-ds{
+				width: 100%;
+				
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index:105;
+				display: none;
+				text-align: center;
+			}
+			#l-ds img{
+				width: 100%;
+				vertical-align: middle;
+			}
+			.ksweus h2{
+				font-size: 0.3rem;
+			}
+		</style>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zoom.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--头部部分-->
+		<div class="Yhead">
+			<a href="javascript:window.history.go(-1)" class="fan"><img class="lms" src="img/datou.png"/></a>
+			<img class="mh" src="img/index1.png"/>
+			<ul class="nav1"> 
+				<li><a href="index.html">首页</a> </li>
+				<li><a href="xiaoxi.html">消息</a> </li>
+				<li><a class="we" href="wenda.html">问诊</a> </li>
+				<li><a href="sousu.html"><img class="imss" src="img/sous1.png"/></a> </li>
+			</ul>
+		</div>
+		<!--问题描述部分-->
+		<div class="kausuwenda bod">
+			<ul class="ksweus">
+				<li>
+					<p class="xxxt xxxt1">
+						<img src="img/user.png"/><span class="xt xt1">农友9538</span>
+					</p>
+					<h1 id="lyhh">请问大都如何种植才避免生充，去年种的大豆生了很多虫子</h1>
+					<div class="xx02">
+						<!--<img class="xx03" src="img/xix03.png"/>
+						<img class="xx03" src="img/xix03.png"/>
+						<img class="xx03" src="img/xix03.png"/>-->
+					</div>
+					<div class="xttm xttm2">
+						<time> 2016/10/26 10:22 </time>
+						<!--<p class="ss"><img class="dj" src="img/wz.png" alt="2"/><i class="num">237</i>
+							<img class="imks" src="img/pl.png"/><i>115</i>
+						</p>-->
+						
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--专家问题回答部分-->
+		<div class="bds">
+			<p class="dafu">全部回复</p>
+		</div>
+		<!--<p class="ss"><img  class="dj" src="img/wz.png" alt="1"/><i  class="num">236</i>
+							<img class="imks" src="img/pl.png"/><i>115</i>
+						</p>-->
+		<div class="kausuwenda">
+			<ul class="ksweus lyks2">
+				<!--<li>
+					<p class="xxxt">
+						<img src="img/user.png"/><span class="xt">老牛</span>
+					</p>
+					<h1 class="hh">看图应该是长期施用化肥，农家肥减少，造成土壤板结</h1>
+					
+					<div class="xttm">
+						<time> 2016/10/26 10:22 </time>
+						
+					</div>
+				</li>-->
+			</ul>
+			<p id="whps"></p>
+		</div>
+		<!--遮盖层-->
+		<div id="l-ds">
+			<!--<div class="l-cen2">-->
+				<img src="" />
+			<!--</div>-->
+		</div>
+		<!--底部搜索跳转-->
+		<div class="education_fir dibu" style="background: #fff;">
+			<a class="ly-as" href=""><input type="text" disabled="disabled" placeholder="非提问者无法追问..."></a>
+		</div>
+	</body>
+	<script src="js/xiazai.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/dianzan.js" type="text/javascript" charset="utf-8"></script>-->
+	<script type="text/javascript">
+		jQuery(function ($){
+		function GetRequest() {
+		   var url = location.search; //获取url中"?"符后的字串
+		   if (url.indexOf("?") != -1) {    //判断是否有参数
+		      var str = url.substr(1); //从第一个字符开始 因为第0个是?号 获取所有除问号的所有符串
+		      strs = str.split("=");   //用等号进行分隔 （因为知道只有一个参数 所以直接用等号进分隔 如果有多个参数 要用&号分隔 再用等号进行分隔）
+		    return strs[1]         //直接弹出第一个参数 （如果有多个参数 还要进行循环的）
+		   }
+		}
+		var sds=null;
+		var sj=1;
+		var sid=GetRequest();
+		var hm='';
+		var hm1='';
+		//console.log(sid);
+		$.ajaxSetup({ 
+		    async : false 
+		});
+		function ax1(urls,obj){
+			$.post(urls,obj,function(data) {
+			sds=data;
+			}, "json");
+		}
+		ax1("http://jiayuan.meihaojy.com/rest.php?s=web/index",{'method':'fosung.app.specialist.questiondetail','question_id':sid,'page':sj});
+		//console.log(sds);
+			if(sds.data.question.user_thumb==''||sds.data.question.user_thumb==null){
+					$('.xxxt1 img').eq(0).attr('src','img/user@2x.png');
+			}else {
+			    	$('.xxxt1 img').eq(0).attr('src',sds.data.question.user_thumb);
+			}
+		
+		$('.xt1').eq(0).html(sds.data.question.user_name);
+		$('#lyhh').html(sds.data.question.question_content);
+		$.each(sds.data.question.question_thumb, function(it,obj) {
+			if(sds.data.question.question_thumb.length===0){
+				hm+=' ';
+			}else {
+				hm+='<img class=dotai_'+sds.data.question.question_thumb.length+' src='+sds.data.question.question_thumb[it].thumb_url+' />';
+			}
+		});	
+		$('.xx02').eq(0).html(hm);
+		$('.xttm2 time').eq(0).html(sds.data.question.question_addtime);
+		//console.log(sds.data.reply.length)
+		if(sds.data.reply.length==0){
+			return false;
+		}else {
+			$.each(sds.data.reply, function(it,obj) {
+				hm1+='<li><p class="xxxt">'
+				if(sds.data.reply[it].reply_user_thumb==''||sds.data.reply[it].reply_user_thumb==null){
+					hm1+='<img src="img/user@2x.png"/>';
+				}else {
+					hm1+='<img src='+sds.data.reply[it].reply_user_thumb+' />';
+				}
+				
+				hm1+='<span class="xt">'+sds.data.reply[it].reply_user_name+'</span></p>';
+				hm1+='<h2 class="hh">'+sds.data.reply[it].reply_content+'</h2><div class="xx02">';
+				$.each(sds.data.reply[it].reply_thumb, function(its,obj) {
+					if(sds.data.reply[it].reply_thumb.length===0){
+						hm1+='';
+					}else {
+						hm1+='<img class=dotai_'+sds.data.reply[it].reply_thumb.length+' src='+sds.data.reply[it].reply_thumb[its].thumb_url+' />';
+					}
+				});	
+				hm1+='</div><div class="xttm"><time>'+sds.data.reply[it].reply_addtime+'</time></div></li>';
+			})
+			$('.lyks2').html(hm1);
+		}
+		if(sds.data.question_close.question_close_content.length==0){
+			return false
+		}else {
+			$('#whps').html(sds.data.question_close.question_close_content).addClass('clgb');
+		}
+		var gao=$(window).height();
+			$('.xx02 img').on('touchstart',function(e){
+				e.preventDefault();
+				e.stopPropagation()
+				var srcs=$(this).attr('src')
+				$('#l-ds').css({'height':gao,'line-height':gao+'px','background':'rgba(0,0,0,1)','display':'block'});
+				
+				$('#l-ds img').attr('src',srcs);
+				$(document.body).css("overflow","hidden");
+			})
+			$('#l-ds').click(function (){
+				$('#l-ds').css({'display':'none'});
+				$(document.body).css("overflow","scroll");
+			})
+	})
+	</script>
+</html>

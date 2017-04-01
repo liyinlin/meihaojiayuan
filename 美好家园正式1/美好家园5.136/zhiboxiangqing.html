@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 100px;">
+<head>
+<meta charset="utf-8" />
+<title>美好家园</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<style type="text/css">
+	a{text-decoration: none;}
+</style>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/gongyou.css"/>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/zoom.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/T5Player/js/cyberplayer.min.js"></script>
+</head>
+
+<body>
+<!--LYL  2017.2.22 第一版-->
+		<!--头部部分-->
+		<div class="Yhead">
+			<a href="javascript:window.history.go(-1)" class="fan"><img class="lms" src="img/datou.png"/></a>
+			<img class="mh" src="img/index1.png"/>
+			<ul class="nav1"> 
+				<li><a  class="we" href="index.html">首页</a> </li>
+				<li><a href="xiaoxi.html">消息</a> </li>
+				<li><a href="wenda.html">问诊</a> </li>
+				<li><a href="sousu.html"><img class="imss" src="img/sous1.png"/></a> </li>
+			</ul>
+		</div>
+		<!--视频部分-->
+<div class="video mb15">
+    <div class="head">
+    	<!-- <video  class="vis" controls style="width:100%;">
+        	<source src="http://www.jddqsm.com/d/file/video/shop/2016-11-12/c809969f59274d03df7e10094a74c839.mp4" type="video/mp4">
+            您的浏览器不能使用最新的视频播放方式呢
+        </video> -->
+        
+        <video class="vis" controls src=""  poster="" style="width:100%;">
+        您的浏览器不能使用最新的视频播放方式呢
+        </video>
+    </div>
+    <div class="nav" style="margin-top: -0.2rem;">
+        <div class="detail fl">
+            <p>详情</p>
+        </div>
+        <div class="talk fl">
+            <p><a class="ly-as" href="">聊天</a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="title">
+        <h1>掌握一手动态 就在农业资讯</h1>
+        <div class="description"><div>主讲人:<span class="ss1">周晓波</span></div><div class="bfl">播放量：<span class="ss2">183</span></div><div class="starkb">开播时间：<span class="ss3">2016/12/12 10:00:00</span></div></div>
+    </div>
+</div>
+<div class="answer">
+    <div class="title mb10">简介</div>
+    <div class="detail lycen">看图是应该是使用话费增多，农家肥使用较少，造成的土壤板结，却苏症状验证，如缺铁、钾、钙等。</div>
+</div>
+<!--下载页面-->
+		<div class="xiaz">
+			<img class="cha" src="img/cha.png"/>
+			<img class="logo1" src="img/log.png"/>
+			<span><a style="text-decoration: none;" class="ly-as" href="">下载</a></span>
+		</div>
+<!--下载页面-->
+<div style="height:70px; display:block;"></div>
+</body>
+<script src="js/xiazai.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	jQuery(function ($){
+			function GetRequest() {
+		   var url = location.search; //获取url中"?"符后的字串
+		   if (url.indexOf("?") != -1) {    //判断是否有参数
+		      var str = url.substr(1); //从第一个字符开始 因为第0个是?号 获取所有除问号的所有符串
+		      strs = str.split("=");   //用等号进行分隔 （因为知道只有一个参数 所以直接用等号进分隔 如果有多个参数 要用&号分隔 再用等号进行分隔）
+		    return strs[1]         //直接弹出第一个参数 （如果有多个参数 还要进行循环的）
+		   }
+		}
+		var sds=null;
+		var sj=1;
+		var sid=GetRequest();
+		var hm='';
+		var hm1='';
+		//console.log(sid);
+		$.ajaxSetup({ 
+		    async : false 
+		});
+		function ax1(urls,obj){
+			$.post(urls,obj,function(data) {
+			sds=data;
+			}, "json");
+		}
+		var hs='';
+		ax1("http://jiayuan.meihaojy.com/rest.php?s=web/index",{'method':'fosung.app.video.web.show','v_id':sid,'v_detail_type':sj});
+		console.log(sds);
+		$('.vis').attr('poster',sds.data.v_image);
+		$('.vis').attr('src',sds.data.v_url);
+		
+		
+/* 		$('.vis').eq(0).attr('poster',sds.data.v_image);
+		$('.vis source').eq(0).attr('src',sds.data.v_url); */
+		$('.lycen').eq(0).html(sds.data.v_content);
+		$('.title h1').eq(0).html(sds.data.v_name);
+		$('.ss1').eq(0).html(sds.data.v_teacher);
+		if(sds.data.v_view_num==0||sds.data.v_view_num==''){
+			$('.ss2').eq(0).parent().hide();
+		}else {
+			$('.ss2').eq(0).html(sds.data.v_view_num);
+		}
+		if(sds.data.v_start_time==''){
+			$('.ss3').eq(0).html(hs);
+		}else {
+			$('.ss3').eq(0).html(sds.data.v_start_time);
+		}
+	
+	})
+</script>
+</html>

@@ -1,0 +1,55 @@
+/*直播列表css*/
+#list{
+	border-top:0.1rem solid #f0f0f0;
+	padding: 0.2rem;
+}
+#list .us li{
+	position: relative;
+}
+#list .us li .imw {
+	width: 6rem;
+	height: 2.97rem;
+}
+#list .ico{
+	width: 0.9rem;
+	height: 0.36rem;
+	background: #000;
+	opacity: 0.8;
+	position: absolute;
+	right: 0.1rem;
+	top: 0.1rem;
+	border-radius:0.04rem;
+}
+#list .ico img {
+	width: 0.71rem;
+	height: 0.23rem;
+	position: absolute;
+	top: 0.06rem;
+	left: 0.06rem;
+}
+#list p{
+	position: absolute;
+	margin-left: 0.15rem;
+}
+#list .lips{
+	font-size: 0.3rem;
+	color: #fff;
+	bottom: 0.65rem;
+	
+}
+i{
+	font-style: normal;
+}
+#list .lipp{
+	width: 95%;
+	font-size: 0.22rem;
+	bottom: 0.3rem;
+	overflow: hidden;
+	color: #ffffff;
+}
+#list .lipp span{
+	float: left;
+}
+#list .lipp time{
+	float: right;
+}

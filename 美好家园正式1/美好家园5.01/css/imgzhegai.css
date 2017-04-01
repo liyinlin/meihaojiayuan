@@ -1,0 +1,20 @@
+
+			.l-cen2 img{
+				width: 100%;
+				
+			}
+			.l-cen2{
+				margin-top: 60px;
+   				text-align: right;
+   				z-index: 10px;
+   				display: none;
+			}
+			#l-ds{
+				width: 100%;
+				height: auto;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index:105;
+				display: none;
+			}

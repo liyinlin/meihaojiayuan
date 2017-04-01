@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html style="font-size: 100px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>美好家园</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/gongyou.css" />
+		<link rel="stylesheet" type="text/css" href="css/xiaoxixiangqing.css" />
+		<style type="text/css">
+			.hh {
+				font-size: 0.34rem !important;
+				padding: 0 0.2rem;
+				font-weight: normal !important;
+			}
+			
+			.sjfbu2 {
+				padding-bottom: 1rem;
+			}
+			#l-ds{
+				width: 100%;
+				
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index:105;
+				display: none;
+				text-align: center;
+			}
+			#l-ds img{
+				width: 100%;
+				vertical-align: middle;
+			}
+			.xitgl2{
+				color:#000;
+			}
+		</style>
+		<!--<link rel="stylesheet" type="text/css" href="css/imgzhegai.css" />-->
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zoom.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--头部首页消息部分-->
+		<div class="Yhead">
+			<a href="javascript:window.history.go(-1)" class="fan"><img class="lms" src="img/datou.png" /></a>
+			<img class="mh" src="img/index1.png" />
+			<ul class="nav1">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a class="we" href="xiaoxi.html">消息</a>
+				</li>
+				<li>
+					<a href="wenda.html">问诊</a>
+				</li>
+				<li>
+					<a href="sousu.html"><img class="imss" src="img/sous1.png" /></a>
+				</li>
+			</ul>
+		</div>
+		<!--系统管理员发布时间部分-->
+		<div class="sjfbu">
+			<div class="xttime">
+				<img src="img/xiaoxilogo2.png" alt="" />
+				<div class="xtds">
+					<p class="xitgl">系统管理员</p>
+					<p class="xttm"><time> 2016/10/26 10:22 </time><span>浏览量:<i>2316</i> </span></p>
+				</div>
+			</div>
+		</div>
+		<!--新闻内容部分-->
+		<h1 class="hh">农业部专家：大豆进口对国内产业损害加深</h1>
+		<div class="sjfbu sjhh">
+
+			<!--<p class="xiaoxi">我国是大豆原产国，拥有得天独厚的大豆种质资源优势，曾是世界最大的大豆生产国和出口国。入世以来，在大豆需求快速增长、进口持续大量增加的同时，国内生产不断减少，自给水平大幅下降。由于大豆市场高度开放，大豆成为入世后最先出现进口大幅增加、增长快速的大宗产品。</p>
+			<img src="img/jx01.png"/>-->
+		</div>
+		<div>
+			<div class="lypl">评论:<i>17</i></div>
+			<ul class="sjfbu2">
+				<li class="xiaolis">
+					<div class="xttime2 bonode">
+						<img src="img/user.png" alt="" />
+						<div class="xtds2">
+							<p class="xitgl2">系统管理员</p>
+							<p class="xttm2"><time> 2016/10/26 10:22 </time></p>
+						</div>
+					</div>
+					<p class="marps">所有符</p>
+				</li>
+			</ul>
+		</div>
+
+		<!--底部评论部分跳转下载页-->
+
+		<div class="education_fir fots">
+			<a class="ly-as" href=""><input type="text" disabled="disabled" placeholder="发表评论"></a>
+		</div>
+		<!--遮盖层-->
+		<div id="l-ds">
+			<!--<div class="l-cen2">-->
+				<img src="" />
+			<!--</div>-->
+		</div>
+	</body>
+	<script src="js/xiazai.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			function GetRequest() {
+				var url = location.search; //获取url中"?"符后的字串
+				if(url.indexOf("?") != -1) { //判断是否有参数
+					var str = url.substr(1); //从第一个字符开始 因为第0个是?号 获取所有除问号的所有符串
+					strs = str.split("="); //用等号进行分隔 （因为知道只有一个参数 所以直接用等号进分隔 如果有多个参数 要用&号分隔 再用等号进行分隔）
+					return strs[1] //直接弹出第一个参数 （如果有多个参数 还要进行循环的）
+				}
+			}
+			var sds = null;
+			var sj = 1;
+			var sid = GetRequest();
+			//console.log(sid);
+			$.ajaxSetup({
+				async: false
+			});
+
+			function ax1(urls, obj) {
+				$.post(urls, obj, function(data) {
+					sds = data;
+				}, "json");
+			}
+			ax1("http://jiayuan.meihaojy.com/rest.php?s=web/index", { 'method': 'fosung.app.message.detail', 'message_id': sid, 'page': sj });
+			console.log(sds);
+			$('#xttime img').eq(0).attr('src', sds.data.user_thumb);
+			$('.xitgl').get(0).innerHTML = sds.data.user_name;
+			$('.xttm time').get(0).innerHTML = sds.data.message_addtime;
+			$('.xttm span i').get(0).innerHTML = sds.data.message_view_num;
+			$('.hh').get(0).innerHTML = sds.data.message_title;
+			$('.sjhh').get(0).innerHTML = sds.data.message_content;
+			$('.lypl i').eq(0).html(sds.data.message_comment_num);
+			var hm = '';
+			$.each(sds.data.message_comment, function(itm, obj) {
+				hm += '<li class="xiaolis"><div class="xttime2 bonode">';
+				if(sds.data.message_comment[itm].comment_user_thumb == '' || sds.data.message_comment[itm].comment_user_thumb == null) {
+					hm += '<img src="img/user@2x.png" alt="" />';
+				} else {
+					hm += '<img src=' + sds.data.message_comment[itm].comment_user_thumb + ' alt="" />';
+				}
+
+				hm += '<div class="xtds2"><p class="xitgl2">' + sds.data.message_comment[itm].comment_user_name + '</p><p class="xttm2">';
+				hm += '<time>' + sds.data.message_comment[itm].comment_addtime + '</time></p></div></div>';
+				hm += '<p class="marps">' + sds.data.message_comment[itm].comment_content + '</p></li>';
+			});
+			$('.sjfbu2').eq(0).html(hm);
+			 //遮盖层
+			var gao=$(window).height();
+			console.log(gao);
+			$('.sjhh img').on('touchstart',function(e){
+				e.preventDefault();
+				e.stopPropagation()
+				var srcs=$(this).attr('src')
+				$('#l-ds').css({'height':gao,'line-height':gao+'px','background':'rgba(0,0,0,1)','display':'block'});
+				$('#l-ds img').attr('src',srcs);
+				$(document.body).css("overflow","hidden");
+			})
+			$('#l-ds').click(function (){
+				$('#l-ds').css({'display':'none'});
+				$(document.body).css("overflow","scroll");
+			})
+		})
+	</script>
+
+</html>

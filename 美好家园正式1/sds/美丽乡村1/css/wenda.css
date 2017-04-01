@@ -1,0 +1,103 @@
+.tabs .wenus li{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.tabs .wenus{
+	overflow: hidden;
+}
+.tabs #wenus li a{
+	width: 45%;
+	font-size: 0.28rem;
+	margin-left: 0.7rem;
+}
+.tabw{
+	border-bottom:0.1rem solid #ccc ;
+}
+.kausuwenda{
+	padding: 0 0.2rem;
+
+}
+.kausuwenda li .img{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.kausuwenda li span{
+	color: #999999;
+	font-size: 0.28rem;
+}
+
+.xxxt {
+	position: relative;
+	height: 0.4rem;
+}
+.xxxt span{
+	position: absolute;
+}
+.xxxt .xt{
+	font-size: 0.28rem;
+	left: 0.5rem;
+}
+.xxxt img{
+	width: 0.4rem;
+	height: 0.4rem;
+	position: absolute;
+}
+.xxxt .time{
+	font-size: 0.24rem;
+	color: #999999;
+	top: 0.05rem;
+	right: 0.5rem;
+}
+.ksweus li{
+		border-bottom:0.01rem solid #ccc ;
+		padding: 0.2rem 0;
+}
+.ksweus h1{
+	font-size: 0.3rem;
+}
+.xx02{
+	overflow: hidden;
+	margin-left: -0.05rem;
+	margin-bottom: 0.15rem;
+}
+.xx02 .xx03{
+	width: 1.96rem;
+	height: 1.2rem;
+	float: left;
+	margin-left: 0.05rem;
+}
+.pas{
+	color: #606060;
+}
+.xttm{
+
+	overflow: hidden;
+	color: #999999;
+}
+i{
+	font-style:normal;
+}
+.xttm,.ss{
+		font-size: 0.24rem;
+}
+.xttm time{
+	float: left;
+}
+.xttm .ss{
+	float: right;
+}
+.xttm .ss img {
+	width: 0.3rem;
+	height: 0.3rem;
+}
+.xttm i{
+	margin-left: 0.1rem;
+}
+.imks{
+	margin-left: 0.5rem;
+}
+#im{
+	width: 6rem;
+    height: 3.1rem;
+}

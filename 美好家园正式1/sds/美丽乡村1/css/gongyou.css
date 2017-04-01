@@ -1,0 +1,93 @@
+/*头部首页消息查询部分*/
+.Yhead{
+	width: 100%;
+	height:0.88rem;
+	background: #1ddd83;
+	overflow: hidden;
+}
+.nav1{
+	width: 3.15rem;
+	height: 0.28rem;
+	font-size: 0.28rem;
+	float: right;
+	overflow: hidden;
+	margin-top: 0.3rem;
+}
+.nav1 li a{
+	color: #c8ecdb;
+}
+
+.nav1 li{
+	float: left;
+	height: 0.28rem;
+	border-left:1px solid #fff;
+	
+	line-height: 0.28rem;
+	padding:0 0.14rem;
+}
+.nav1 .imss{
+	width: 0.28rem;
+	height: 0.28rem;
+}
+.nav1 .we{
+	color: #fff;
+}
+.Yhead .mh{
+	width: 1.89rem;
+	height: 0.64rem;
+	float: left;
+	margin: 0.1rem 0 0 0.2rem;
+}
+
+
+/*导航部分的CSS*/
+.tabs{height:0.88rem;}
+.tabs a{display:block;float:left;width:14.2%;color:#333;text-align:center;line-height:0.88rem;font-size:0.28rem;text-decoration:none;}
+.tabs .active {
+	color: #2cc17b;
+	border-bottom:0.02rem solid #1ddd83;
+}
+/*地步下载页*/
+.xiaz{
+	width:100%;
+	height: 0.98rem;
+	background:rgba(0,0,0,0.8);
+	position: fixed;
+	bottom: 0rem;
+	z-index: 80;
+	line-height: 0.98rem;
+}
+.col{
+	background: #ffcb66;
+}
+.xiaz img{
+	float: left;
+}
+.xiaz .cha{
+	width: 0.33rem;
+	height: 0.33rem;
+	margin: 0.325rem;
+	
+}
+.xiaz .logo1{
+	width: 2.18rem;
+	height: 0.69rem;
+	margin: 0.145rem;
+}
+.xiaz span{
+	display: inline-block;
+	width: 1.10rem;
+	height: 0.5rem;
+	
+	font-size: 0.28rem;
+	text-align: center;
+	background:#2cc17b;
+	float: right;
+	line-height: 0.5rem;
+	border-radius: 0.05rem;
+	margin: 0.24rem;
+}
+.xiaz span a{
+	color: #fff;
+}
+

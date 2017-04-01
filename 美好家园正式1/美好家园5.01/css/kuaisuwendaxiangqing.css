@@ -1,0 +1,32 @@
+.kausuwenda .xt{
+	color: #507daf;
+}
+.dafu{
+	padding:0.2rem;
+	font-size: 0.24rem;
+	color: #999999;
+}
+.bod {
+    border-bottom: 0.1rem solid #F0EFF5;
+    
+}
+.bds{
+	border-bottom: 0.01rem solid #dddddd;
+}
+.bod li{
+	border: 0;
+}
+.ksweus .hh{
+	color: #363636;
+}
+/*底部搜索栏css*/
+.education_fir{width: 100%;border-bottom: 0.01rem solid #ccc; position: relative;padding: 0.2rem 0;}
+.education_fir input{outline: none;background:#F9F9F9;border: 0.01rem solid #ddd;width:5.56rem;font-size: 0.28rem; margin: 0 auto;padding-left: 0.2rem;height: 0.56rem;display: block;border-radius: 0.1rem;}
+.education_fir img{position: absolute;display: block;width: 0.25rem;height: 0.25rem;top: 0.35rem;left: 0.25rem;}
+.fots{
+	position: fixed;
+	bottom: 0;
+	background:#f0f0f0;
+	
+}
+

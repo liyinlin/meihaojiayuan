@@ -1,0 +1,11 @@
+.dibu{
+	position:fixed;
+	bottom: 0rem;
+	border-top:0.01rem solid #BEBEBE;
+}
+.colse{
+	color: #999999;
+	text-align: center;
+	font-size: 0.26rem;
+	
+}

@@ -1,0 +1,96 @@
+*{margin:0;padding:0;border:0;}
+body{font-family:Verdana, Arial, '微软雅黑'; background-color:#F1F5EF;}
+ul,li{ list-style:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.clear{ clear:both;}
+.mb7{margin-bottom:7pt;}
+.mb10{margin-bottom:6pt;}
+.mb15{margin-bottom:10pt;}
+
+.user{ font-size:12pt; color:#507daf;}
+.user .img{ float:left; width:20pt; height:20pt; margin-right:5pt;border-radius:10pt; background-size:100% 100%; background-repeat:no-repeat;}
+.user span{ font-size:10pt; background-color:#FFA337; border-radius:5px; color:#fff; padding:0 3px; line-height:25px;}
+.time{ font-size:12pt;color:#999999;}
+
+.question, .answer, .question_list,.present{ padding:8pt; background-color:#fff;}
+.question .detail{ font-size:12pt; color:#363636;}
+.question .pics img{ float:left; width:31%; margin:0 3pt 3pt 0;}
+
+.answer{ margin-top:10pt; }
+.answer li{margin-top:15pt; border-bottom:#EDEDED solid 1px; }
+.answer .title{ font-size:12pt; color:#999999;}
+.answer .detail{ font-size:12pt; color:#363636;word-wrap: break-word;/* height:52px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;*/}
+.answer .show{ font-size:12pt; color:#507daf; text-align:right;}
+.answer .show a{font-size:12pt; color:#507daf; text-decoration: underline;}
+
+.down{ background-color:rgba(22, 22, 22, 0.8); position:fixed; bottom:0pt; width:100%; height:60px;}
+.down .close,.down img,.down .text{ float:left; margin-left:15px;} 
+.down .close { height:18px; width:18px; background:url(../img/close.png) no-repeat center; margin-top:21px;} 
+.down img { width:47px; height:47px; margin-top:6px;}
+.down .text p{ color:#2CC17B; margin-top:6px;}
+.down .text span{ color:#FFF;    font-size: 10pt;}
+.down .button{ background-color:#2CC17B; border-radius:5pt; color:#FFF; font-size: 10pt;width:50px; height:33px; line-height:33px; text-align:center; margin-top:15px; float:right; margin-right:15px;}
+
+.present .head{ float:left; margin-right:10pt;}
+.present .head .img{ float:left;width:40pt; height:40pt; border-radius:20pt; background-size:100% 100%;  background-repeat:no-repeat;    background-position: center center; }
+.present .detail{float:left; font-size:12pt; color:#999999; width:76%;}
+.present .detail .name{font-size:14pt;color:#507daf;}
+
+.ask{ height: auto; background-color:#fff; border-top:#EDEDED solid 1px; margin-top:15pt; padding-top:8pt;}
+.ask p{font-size:12pt;color:#363636;}
+.ask span{font-size:10pt;color:#999999;}
+.ask .voice{margin:15pt 10pt 0pt 0pt;padding: 0pt 10pt 0pt 35pt; }
+.ask .text{margin: 15pt 0pt 0pt 0pt;padding: 0pt 0pt 0pt 35pt; }
+.ask .voice{background:url(../img/voice.png) no-repeat left center;background-size: 26%;border-right:#EDEDED solid 1px; }
+.ask .text{background:url(../img/text.png) no-repeat left center;background-size: 26%;}
+
+.question_list{ margin-top:10pt; }
+.question_list a{ text-decoration:none;}
+.question_list .expert{ font-size:12pt; color:#507daf;}
+.question_list .expert .q1{ width:60px; height:26px; background:url(../img/q1.png) no-repeat center; background-size:100%;}
+.question_list .expert .q2{ width:60px; height:26px; background:url(../img/q2.png) no-repeat center; background-size:100%;}
+.question_list .expert .q0{ width:60px; height:26px; background:url(../img/q0.png) no-repeat center; background-size:100%;}
+.question_list .expert .img{ float:left; width:30pt; height: 30pt; margin-right:5pt;border-radius:15pt; background-size:100% 100%; background-repeat:no-repeat;}
+.question_list .expert span{ font-size:10pt; background-color:#FFA337; border-radius:5px; color:#fff; padding:0 3px; line-height:25px;}
+.question_list .time{ font-size:10pt;color:#999999;}
+.question_list li{margin-top:15pt; border-bottom:#EDEDED solid 1px; }
+.question_list .title{ font-size:12pt; color:#999999;}
+.question_list .detail{ font-size:12pt; color:#363636;word-wrap: break-word;/* height:52px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;*/}
+.question_list .show{ font-size:12pt; color:#507daf; text-align:right;}
+.question_list .show a{font-size:12pt; color:#507daf; text-decoration: underline;}
+
+.down_bg{background:#2DEF94 url("../img/down_bg.png") no-repeat bottom fixed!important;background-size:100%; text-align:center;}
+.iphone, .android{ width:262px; height:60px; margin: 0 auto; display:block;}
+.iphone{ background:url(../img/down_button_iphone.png) no-repeat center; text-indent:99999999;}
+.android{background:url(../img/down_button_android.png) no-repeat center;}
+
+.video{background-color:#fff;}
+.video .head .play{ background-size:100% 100%; background-repeat:no-repeat;width:100%; height:105px; text-align:center; padding-top:55px;}
+.video .nav{ /*border-bottom:#EDEDED solid 1px;*/}
+.video .detail,.video .talk{ width:50%; text-align:center; margin-top:8pt; padding-bottom:8pt;font-size:14pt;border-bottom: #EDEDED solid 1px;}
+.video .detail{ color:#2cc17b;border-bottom: #2cc17b solid 1px; }
+.video .detail p{ border-right:#EDEDED solid 1px;}
+.video .talk{ }
+.video .talk a{ color:#363636; text-decoration:none; }
+.video .title{background-color:#fff; padding:15pt;}
+.video .title h1{font-size:14pt; color:#363636;font-weight: inherit;}
+.video .title .description{font-size:12pt; color:#999999; margin-top:6pt;}
+
+.present .content{ background-color:#fff; border-top:#EDEDED solid 1px; margin-top:15pt; padding-top:15pt;}
+.present .content h1{font-size:14pt; color:#363636;}
+
+.error{ background-color:#dad9d7;  padding-top:140px;  color:#666D75;}
+.error .message{text-align:center;line-height:30px;}
+
+
+.appointment{ background-color:#EEEEEE; position:fixed; bottom:0pt; width:100%; height:45px; font-size:12px;}
+.appointment .text{ float:left; margin-left:15px; line-height:45px;} 
+.appointment .text p span{ color:#FB4D34;}
+.appointment .button{ background-color:#2CC17B; font-size: 10pt;width:50px; height:45px; line-height:45px; text-align:center; float:right;}
+.appointment .button a{ color:#FFF; text-decoration:none;}
+
+
+
+
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>美好家园</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/gongyou.css" />
+		<link rel="stylesheet" type="text/css" href="css/wenda.css" />
+		<link rel="stylesheet" type="text/css" href="css/kuaisuwendaxiangqing.css" />
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zoom.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.dotai_1 {
+				width: 100%;
+				height: 2rem;
+				float: left;
+			}
+			
+			.dotai_2 {
+				width: 48%;
+				height: 2rem;
+				float: left;
+				margin-left: 0.1rem;
+			}
+			
+			.dotai_3,
+			.dotai_4,
+			.dotai_5,
+			.dotai_6 {
+				width: 32%;
+				height: 2rem;
+				float: left;
+				margin-left: 0.07rem;
+				margin-top: 0.05rem;
+			}
+			
+			.ksweus h2 {
+				font-size: 0.3rem;
+			}
+			
+			.ksweus h2 a {
+				color: #1ddd83;
+			}
+			
+			.kjs {
+				padding-bottom: 1rem;
+			}
+			
+			
+			#l-ds{
+				width: 100%;
+				
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index:105;
+				display: none;
+				text-align: center;
+			}
+			#l-ds img{
+				width: 100%;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部部分-->
+		<div class="Yhead">
+			<a href="javascript:window.history.go(-1)" class="fan"><img class="lms" src="img/datou.png" /></a>
+			<img class="mh" src="img/index1.png" />
+			<ul class="nav1">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="xiaoxi.html">消息</a>
+				</li>
+				<li>
+					<a class="we" href="wenda.html">问诊</a>
+				</li>
+				<li>
+					<a href="sousu.html"><img class="imss" src="img/sous1.png" /></a>
+				</li>
+			</ul>
+		</div>
+		<!--问题描述部分-->
+		<div class="kausuwenda bod">
+			<ul class="ksweus">
+				<li>
+					<p class="xxxt xxxt1">
+						<img src="img/user.png" /><span class="xt xt1">农友9538</span>
+					</p>
+					<h1 class="lyhs">请问大都如何种植才避免生充，去年种的大豆生了很多虫子</h1>
+					<div class="xx02">
+						<img class="xx03" src="img/xix03.png" />
+						<img class="xx03" src="img/xix03.png" />
+						<img class="xx03" src="img/xix03.png" />
+					</div>
+					<div class="xttm lusd">
+						<time> 2016/10/26 10:22 </time>
+						<p class="ss"><img class="dj" src="img/wz.png" alt="2" /><i class="num">237</i>
+							<img class="imks" src="img/pl.png" /><i class="nums">115</i>
+						</p>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--专家问题回答部分-->
+		<div class="bds">
+			<p class="dafu">全部回复</p>
+		</div>
+
+		<div class="kausuwenda">
+			<ul class="ksweus kjs">
+				<!--<li>
+					<p class="xxxt">
+						<img src="img/user.png"/><span class="xt">老牛</span>
+					</p>
+					<h1 class="hh">看图应该是长期施用化肥，农家肥减少，造成土壤板结</h1>
+					
+					<div class="xttm">
+						<time> 2016/10/26 10:22 </time>
+						<p class="ss"><img  class="dj" src="img/wz.png" alt="1"/><i  class="num">236</i>
+							<img class="imks" src="img/pl.png"/><i>115</i>
+						</p>
+					</div>
+				</li>-->
+			</ul>
+		</div>
+		<!--底部搜索跳转-->
+		<div class="education_fir fots">
+			<a class="ly-as" href=""><input type="text" disabled="disabled" placeholder="发表评论"></a>
+		</div>
+		
+		
+		<!--遮盖层-->
+		<div id="l-ds">
+				<!--<div class="l-cen2">-->
+					<img src=""/>
+				<!--</div>-->
+			</div>
+	</body>
+	<script src="js/xiazai.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/dianzan.js" type="text/javascript" charset="utf-8"></script>-->
+	<script type="text/javascript">
+		jQuery(function($) {
+			function GetRequest() {
+				var url = location.search; //获取url中"?"符后的字串
+				if(url.indexOf("?") != -1) { //判断是否有参数
+					var str = url.substr(1); //从第一个字符开始 因为第0个是?号 获取所有除问号的所有符串
+					strs = str.split("="); //用等号进行分隔 （因为知道只有一个参数 所以直接用等号进分隔 如果有多个参数 要用&号分隔 再用等号进行分隔）
+					return strs[1] //直接弹出第一个参数 （如果有多个参数 还要进行循环的）
+				}
+			}
+			var sds = null;
+			var sj = 1;
+			var sid = GetRequest();
+			var hm = '';
+			var hm1 = '';
+
+			//console.log(sid);
+			$.ajaxSetup({
+				async: false
+			});
+
+			function ax1(urls, obj) {
+				$.post(urls, obj, function(data) {
+					sds = data;
+				}, "json");
+			}
+			console.log(sid);
+			ax1("http://jiayuan.meihaojy.com/rest.php?s=web/index", { 'method': 'fosung.app.specialist.v2.detail', 'question_id': sid, 'page': sj });
+			console.log(sds);
+			if(sds.errorcode == 102) {
+				$('.ksweus').eq(0).html('<li style="text-align: center; padding: 0.2rem; font-size: 0.28rem; color: #ccc;">' + sds.error + '</li>')
+			} else {
+				var bt = sds.data.question;
+				if(bt.user_thumb == '' || bt.user_thumb == null) {
+					$('.xxxt1 img').eq(0).attr('src', 'img/user@2x.png');
+				} else {
+					$('.xxxt1 img').eq(0).attr('src', bt.user_thumb);
+				}
+
+				$('.xt1').eq(0).html(bt.user_name);
+				$('.lyhs').eq(0).html(bt.question_content);
+				$.each(bt.question_thumb, function(imt) {
+					if(bt.question_thumb.length == 0) {
+						hm1 += '';
+					} else if(bt.question_type == 2) {
+						hm1 += '<video controls src=' + bt.question_thumb[imt].thumb_url + ' style="width:100%;"></video>';
+					} else {
+						hm1 += '<img class=dotai_' + bt.question_thumb.length + ' src=' + bt.question_thumb[imt].thumb_url + ' />';
+					}
+				})
+				$('.xx02').eq(0).html(hm1);
+				$('.lusd time').eq(0).html(bt.question_addtime);
+				$('.num').eq(0).html(bt.question_up);
+
+				$('.nums').eq(0).html(bt.question_comment_count);
+				var sd1 = sds.data
+				if(sd1.reply.length == 0) {
+					return false;
+				} else {
+					$.each(sd1.reply, function(it, obj) {
+						hm += '<li><p class="xxxt">';
+						if(sd1.reply[it].reply_user_thumb == '' || sd1.reply[it].reply_user_thumb == null) {
+							hm += '<img src="img/user@2x.png"/>';
+						} else {
+							hm += '<img src=' + sd1.reply[it].reply_user_thumb + '>';
+						}
+						hm += '<span class="xt">' + sd1.reply[it].reply_user_name + '</span></p>';
+						hm += '<h2 class="hh">' + sd1.reply[it].reply_content;
+						if(sd1.reply[it].reply_target_content == '') {
+							hm += '';
+						} else {
+							hm += '//@<a href=' + sd1.reply[it].reply_target_user_thumb + '>' + sd1.reply[it].reply_target_user_name + '</a>' + sd1.reply[it].reply_target_content;
+						}
+						hm += '</h2><div class="xx02">';
+						$.each(sd1.reply[it].reply_thumb, function(its, obj) {
+							if(sds.data.reply[it].reply_thumb.length === 0) {
+								hm += ' ';
+							} else {
+								hm += '<img class=dotai_' + sds.data.reply[it].reply_thumb.length + ' src=' + sds.data.reply[it].reply_thumb[its].thumb_url + ' />';
+							}
+						});
+						hm += '</div><div class="xttm"><time>' + sds.data.reply[it].reply_addtime + '</time><p class="ss"><img  class="dj" src="img/wz.png" alt="1"/>';
+						hm+='<i  class="num">'+ sds.data.reply[it].answer_up+'</i>';
+						hm+='<img class="imks" src="img/pl.png"/><i>回复</i></div></li>';
+					
+					})
+					$('.ksweus').eq(1).html(hm);
+				}
+
+			}
+//			console.log($(window).height());
+            //遮盖层
+			var gao=$(window).height();
+			$('.xx02 img').on('touchstart',function(e){
+				e.preventDefault();
+				e.stopPropagation()
+				var srcs=$(this).attr('src')
+				$('#l-ds').css({'height':gao,'line-height':gao+'px','background':'rgba(0,0,0,1)','display':'block'});
+				
+//				$('.l-cen2').eq(0).css({'display':'block'});
+				$('#l-ds img').attr('src',srcs);
+				$(document.body).css("overflow","hidden");
+			})
+			$('#l-ds').click(function (){
+				$('#l-ds').css({'display':'none'});
+				$(document.body).css("overflow","scroll");
+			})
+		})
+	</script>
+
+</html>

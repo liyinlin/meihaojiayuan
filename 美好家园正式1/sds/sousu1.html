@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html style="font-size: 100px;">
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>搜索页</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ss1.css"/>
+		<link rel="stylesheet" type="text/css" href="css/xiaoxi.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zhuanjialist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/wenda.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			.sname,.szhiwu{
+				width: 3.36rem;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			}
+			.dotai_1{
+				width: 100%;
+				height: 2rem;
+				float: left;
+			}
+			.dotai_2{
+				width: 48%;
+				height: 2rem;
+				float: left;
+			}
+			.dotai_3{
+				width: 33%;
+				height: 2rem;
+				float: left;
+			}
+			.swiper-slide{height:10px}   
+			.swiper-slide-active { height:auto}
+		</style>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zoom.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<!--头部搜索栏-->
+		<div class="education_fir">
+			<a href="javascript:window.history.go(-1)" class="fan"><img class="lms" src="img/datou.png"/></a>
+			<input class="ins" type="text" placeholder="请输入关键字">
+			<span>取消</span>
+		</div>
+		<!--切换栏及切换内容-->
+		<div class="wrap">
+		    <div class="tabs">
+		        <a href="#" hidefocus="true" class="active">视频</a>
+		        <a href="#" hidefocus="true">消息</a>
+		        <a href="#" hidefocus="true">专家</a>
+		        <a href="#" hidefocus="true" >问答</a>
+		    </div>    
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			           <div class="content-slide">
+			           	<div id="vio" class="zhuanjia">
+								<ul class="vius tb1">
+									
+									
+								</ul>
+							</div>
+			           </div>
+			        </div>
+			        <div class="swiper-slide">
+			            <div class="content-slide">
+			             		<div class="xiaoxi">
+									<ul class="XXus">
+										
+									</ul>
+								</div>
+			            </div>
+			        </div>
+			        <div class="swiper-slide">
+			            <div class="content-slide">
+			            	<div class="zhuanjialist">
+								<ul class="zjlst">
+									
+								</ul>
+							</div>
+			            </div>
+			        </div>
+			         <div class="swiper-slide">
+			            <div class="content-slide">
+			            	<div class="kausuwenda">
+								<ul class="ksweus">
+									
+								</ul>
+							</div>
+			            </div>
+			        </div>
+			      </div>
+			   </div>
+		</div>
+	</body>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tabqiehuan.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/dianzan.js" type="text/javascript" charset="utf-8"></script>
+  
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>美好家园</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/gongyou.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zhuanjialist.css"/>
+		<style type="text/css">
+			.linps {
+			    text-align: center;
+			    padding: 0.2rem 0;
+			    font-size: 0.28rem;
+			}
+		</style>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+	<!--头部部分-->
+		<div class="Yhead">
+			<a href="javascript:window.history.go(-1)" class="fan"><img class="lms" src="img/datou.png"/></a>
+			<img class="mh" src="img/index1.png"/>
+			<ul class="nav1"> 
+				<li><a href="index.html">首页</a> </li>
+				<li><a href="xiaoxi.html">消息</a> </li>
+				<li><a  class="we"  href="wenda.html">问诊</a> </li>
+				<li><a href="sousu.html"><img class="imss" src="img/sous1.png"/></a> </li>
+			</ul>
+		</div>
+		<!--搜索框部分-->
+		<div id="sous">
+			<!--<input type="text" value="搜索" />-->
+			<a href="sousu.html"><img class="inp" src="img/sosu_03.png"/></a>  <!--跳转搜索页-->
+		</div>
+		<!--专家列表-->
+		<div class="zhuanjialist">
+			<ul class="zjus">
+				<li class="lis">
+					<a  href="zhuanjiageren.html">
+						<div class="touxia">
+							<img src="img/toux.png"/>
+						</div>
+						<div class="jianjie">
+							<h1 class="name">周晓波</h1>
+							<p class="zhiwu">省种子管理总站副站长农科院长、山东农业专家</p>
+							<p class="shangchang">擅长水稻种植与防范</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<p class="linps">点击加载更多</p>
+		</div>
+	</body>
+	<script src="js/zoom.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		jQuery(function ($){
+			var sds=null;
+			var sj=1;
+			$.ajaxSetup({ 
+			    async : false 
+			});
+			function ax1(urls,obj){
+				$.post(urls,obj,function(data) {
+				sds=data;
+				}, "json");
+			}
+//			进入页面加载的baner等
+			var hm='';
+			ax1("http://jiayuan.meihaojy.com/rest.php?s=web/index",{'method':'fosung.app.specialist.list','page':sj});
+			//console.log(sds);
+			$.each(sds.data.lecture_info, function (its, obj) {
+				hm+='<li class="lis"><a  href=zhuanjiageren.html?lecturer_id='+sds.data.lecture_info[its].lecturer_id+'><div class="touxia">';
+				hm+='<img src='+sds.data.lecture_info[its].lecturer_head_img+' /></div><div class="jianjie">';
+				hm+='<h1 class="name">'+sds.data.lecture_info[its].lecturer_name+'</h1>';
+				hm+='<p class="zhiwu">'+sds.data.lecture_info[its].lecturer_job_title+'</p>';
+				hm+='<p class="shangchang">'+sds.data.lecture_info[its].lecturer_skill_area+'</p></div></a></li>';
+			})
+			$('.zjus').get(0).innerHTML=hm;
+			$(".linps").on('touchstart',function(e){
+				e.preventDefault()
+				sj++;
+				ax1("http://jiayuan.meihaojy.com/rest.php?s=web/index",{'method':'fosung.app.specialist.list','page':sj});
+				//console.log(sds.data.lecture_info.length);
+				if(sds.data.lecture_info.length!=0){
+					$.each(sds.data.lecture_info, function (its, obj) {
+						hm+='<li class="lis"><a  href=zhuanjiageren.html?lecturer_id='+sds.data.lecture_info[its].lecturer_id+'><div class="touxia">';
+						hm+='<img src='+sds.data.lecture_info[its].lecturer_head_img+' /></div><div class="jianjie">';
+						hm+='<h1 class="name">'+sds.data.lecture_info[its].lecturer_name+'</h1>';
+						hm+='<p class="zhiwu">'+sds.data.lecture_info[its].lecturer_job_title+'</p>';
+						hm+='<p class="shangchang">'+sds.data.lecture_info[its].lecturer_skill_area+'</p></div></a></li>';
+					})
+					$('.zjus').get(0).innerHTML=hm;
+				}else{
+					$(this).html('已经全部加载完毕');
+				}
+			})
+		})
+	</script>
+</html>

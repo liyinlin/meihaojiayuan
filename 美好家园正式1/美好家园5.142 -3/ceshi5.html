@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="misapplication-tap-highlight" content="no"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="msapplication-tap-highlight" content="no" />
+<title></title>
+
+<style>
+html,body{
+    margin:0;
+    padding: 0;
+}
+.btn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: .5rem 0;
+    background-color: pink;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+.replyCeng{
+    display: none;
+    width: 100%;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.replyContainer {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: -2;
+}
+.replyTitle {
+    width: 100%;
+    padding: 1.0625rem 0;
+    border-bottom: 1px solid #e0e0e2;
+    color: #575b61;
+    font-size: .9375rem;
+    font-weight: 700;
+    background-color: #fff;
+    position: relative;
+}
+.closeReply {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: .25rem;
+    right: .25rem;
+    z-index: 202;
+    margin: 1rem;
+}
+.replyList {
+    margin: 0 auto;
+    width: 100%;
+    height:14rem;
+    position: relative;
+    z-index: -1;
+}
+.reply-item {
+    padding: .9375rem 1.625rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+    color: #666666;
+    border-bottom: 1px solid #e0e0e2;
+}
+
+.replyBtn {
+    /*padding: 1.0625rem 1.625rem;*/
+    font-size: .9375rem;
+    color: #1daffa;
+    font-weight: 700;
+   /* width: 100%;*/
+    background-color: #fff;
+    border-top: 1px solid #e0e0e2;
+    padding-bottom: 1.0625rem;
+}
+.replyBtn div {
+    padding: .6rem;
+    border: 1px solid #1daffa;
+    border-radius: .3rem;
+    margin: 1.0625rem 1.625rem;
+    margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+    <div>
+        <img src="image/langImg.jpg" style="width:100%;height:auto;"/>
+    </div>
+    <div class="btn" onclick="test()">button</div>
+    <div class="replyCeng">
+        <!--<div class="replyContainer">
+            <div class="replyTitle">
+                <span>睡前小贴士</span>
+                <img class="closeReply" src="image/close.png" />
+            </div>-->
+            <div class="replyList" id="wrapper">
+                <dl class="num-list">
+                    <div class="reply-item" onclick="selectReply()">要注意哦，睡觉前不要吃水果，可以适当喝牛奶</div>
+                    <div class="reply-item">要注意哦，睡觉前不要吃水果，可以适当喝牛奶</div>
+                    <div class="reply-item">要注意哦，睡觉前不要吃水果，可以适当喝牛奶</div>
+                    <div class="reply-item">要注意哦，睡觉前不要吃水果，可以适当喝牛奶</div>
+                    <div class="reply-item">把黑暗的光线试想成大自然的安眠药，从而提示你的身体去大量地制造褪黑激素，这是一种能帮助人平静下来的激素。来自旧金山的专门从事焦虑和失眠的心理学家、心理学博士Steve Orma表示，在入睡前将灯关掉能提高褪黑激素的产量，这样人就会感到倦意。支持这一说法的研究有：2011年发表在《临床内分泌与代谢》期刊上的一篇研究报告表明，在黄昏时刻到睡觉之前暴露在明亮的灯光下会极大地压缩褪黑激素的产量，使人变得极其兴奋。</div>
+                    <div class="reply-item">把黑暗的光线试想成大自然的安眠药，从而提示你的身体去大量地制造褪黑激素，这是一种能帮助人平静下来的激素。来自旧金山的专门从事焦虑和失眠的心理学家、心理学博士Steve Orma表示，在入睡前将灯关掉能提高褪黑激素的产量，这样人就会感到倦意。支持这一说法的研究有：2011年发表在《临床内分泌与代谢》期刊上的一篇研究报告表明，在黄昏时刻到睡觉之前暴露在明亮的灯光下会极大地压缩褪黑激素的产量，使人变得极其兴奋。</div>
+                </dl>
+            </div>
+            <div class="replyBtn">
+                <div>管理</div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script> 
+<script type="text/javascript">
+function test(){
+    $(".replyCeng").css("display","-webkit-box");
+    //$("#tc1").css("display","-webkit-box");
+    myScroll1 = new IScroll('#wrapper', {
+                scrollbarClass: 'myScrollbar' ,
+                hScrollbar:false,
+                vScroll:true,
+                hideScrollbar: true //是否隐藏滚动条  
+            });
+    $('body').bind("touchmove",function(e){  
+        e.preventDefault();  
+    });
+
+    $(".closeReply").unbind("click").bind("click",function(){
+        $(".replyCeng").css("display","none");
+        $('body').unbind("touchmove");
+    });
+}
+
+</script>
+</body>
+</html>

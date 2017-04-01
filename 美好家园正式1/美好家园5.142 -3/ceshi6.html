@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/inde1.css" />
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+#wrapper {
+	width:100%;
+	height:0.88rem;
+	float:left;
+	position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
+	z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+	overflow:hidden;
+}
+#scroller {
+	width:100rem;
+	height:100%;
+	float:left;
+	padding:0;
+}
+#scroller ul {
+	list-style:none;
+	display:block;
+	/*float:left;*/
+	overflow: hidden;
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	text-align:left;
+}
+#scroller li {
+	display:block; 
+	float:left;
+	width:1.3rem;
+	text-align:center;
+	font-family:georgia;
+	font-size:0.18rem;
+	line-height:0.88rem;
+	background: #ccc;
+}
+</style>
+<script src="js/iscroll.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="scroller">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			
+		</ul>
+	</div>
+</div>
+<div>
+	56615645
+</div>
+</body>
+<script>
+	var html = document.getElementsByTagName("html")[0];
+window.onload = window.onresize = function() {
+    var width = document.documentElement.clientWidth || document.body.clientWidth;
+    var f = (100/640) * width; //先有个比例这里用的20/520，的比例
+    html.style.fontSize = f + 'px';
+	document.body.style.display='block';
+	
+}	
+var myscroll;
+//	function loaded() {
+	myScroll = new iScroll('wrapper', {
+	snap: true,
+	hScrollbar: false});
+//	}
+//	document.addEventListener("DOMContentLoaded",loaded,false);
+</script>

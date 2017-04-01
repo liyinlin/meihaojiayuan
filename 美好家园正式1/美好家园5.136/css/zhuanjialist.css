@@ -1,0 +1,53 @@
+#sous {
+	width: 100%;
+	text-align: center;
+	line-height: 0.8rem;
+}
+
+input{outline:medium;-webkit-appearance:none;outline:none; border: 0;}
+
+#sous .inp{
+	width: 95%;
+	height: 0.6rem;
+}
+.zhuanjialist .lis{
+	padding:0.3rem 0.2rem  0rem;
+	overflow: hidden;
+	border-bottom:0.02rem solid #f0f0f0 ;
+}
+.zhuanjialist .lis .touxia,.jianjie{
+	float: left;
+}
+.zhuanjialist .lis .touxia,.lis .touxia img{
+	width: 1.14rem;
+	height: 1.14rem;
+	border-radius: 50%;
+}
+.zhuanjialist .lis .touxia{
+	border-radius: 50%;
+}
+.jianjie,.zhiwu{
+	width: 4.6rem;
+}
+.zhiwu{
+	white-space:nowrap;/*强制文本在一行内显示*/
+	text-overflow:ellipsis; /*溢出省略号，支持ie、safari（webkit）*/
+	overflow:hidden;/*溢出隐藏*/
+}
+.jianjie{
+
+	margin-left: 0.2rem;
+}
+.zhuanjialist .lis a{
+	display: inline-block;
+}
+.name{
+	font-size: 0.3rem;
+	color: #507daf;
+}
+.zhiwu,.shangchang{
+	color: #999999;
+	font-size: 0.27rem;
+}
+
+

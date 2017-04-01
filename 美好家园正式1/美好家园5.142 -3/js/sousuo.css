@@ -1,0 +1,64 @@
+
+
+/*搜索框css*/
+.education_fir{width: 100%;border-bottom: 0.01rem solid #f0f0f0; position: relative;padding: 0.2rem 0;}
+.education_fir input{outline: none;-webkit-appearance: none; border: 0; background: #eeeff3; width:5.56rem;font-size: 0.28rem; margin: 0 auto;padding-left: 0.5rem;height: 0.56rem;display: block;border-radius: 0.1rem;}
+.education_fir img{position: absolute;display: block;width: 0.25rem;height: 0.25rem;top: 0.35rem;left: 0.25rem;}
+
+/*视频显示css*/
+.zhuanjia .slis{
+	padding:0.2rem 0.2rem  0.1rem;
+	overflow: hidden;
+	border-bottom:0.01rem solid #dbdddb ;
+	font-size: 0.28rem;
+}
+.zhuanjia .slis .touxian,.sjianjie{
+	float: left;
+}
+.zhuanjia .slis .touxian,.slis .touxian img{
+	width:2.44rem;
+	height: 1.22rem;
+}
+.zhuanjia .slis .touxian{
+	border-radius: 50%;
+}
+
+.szhiwu{
+	white-space:nowrap;/*强制文本在一行内显示*/
+	text-overflow:ellipsis; /*溢出省略号，支持ie、safari（webkit）*/
+	overflow:hidden;/*溢出隐藏*/
+}
+.sjianjie{
+	margin-left: 0.2rem;
+	margin-top: 0.25rem;
+}
+.zhuanjia .slis a{
+	display: inline-block;
+}
+
+.szhiwu{
+	color: #999999;
+	
+}
+
+/*导航栏切换css*/
+.tabs{height:0.88rem;}
+.tabs a{display:block;float:left;width:25%;color:#333;text-align:center;line-height:0.88rem;font-size:0.28rem;text-decoration:none;}
+.tabs .active {
+	border-bottom:0.02rem solid #1ddd83;
+	color:#1ddd83;
+}
+
+.swiper-container  {height:auto}
+.swiper-container{border-radius:0 0 0.05rem 0.05rem;width:100%;border-top:0;}
+.swiper-slide{width:100%;background:none;}
+.content-slide{font-size: 0.26rem;}
+ 
+.swiper-slide-active { height:auto}
+.tabs{
+	border-bottom: 0.01rem solid #f0f0f0;
+}
+time{
+float: right;
+color: #999999;;
+}

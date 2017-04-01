@@ -1,0 +1,80 @@
+.xttime,.xttime2{
+	height: 1.15rem;
+	overflow: hidden;
+	border-bottom: 0.01rem solid #f0f0f0;
+}
+.sjfbu,.sjfbu2{
+	padding: 0 0.2rem;
+	font-size: 0.26rem;
+}
+.xttime .xtds,.xttime img,.xttime2 .xtds2,.xttime2 img{
+	height: 0.68rem;
+	float: left;
+	margin-top:0.24rem;
+	border-radius: 50%;
+}
+.xttime .xtds,.xttime2 .xtds2{
+	margin-left: 0.15rem;
+	width: 85%;
+}
+.xttime img,.xttime2 img{
+	width: 0.68rem;
+}
+.xitgl,.xitgl2{
+	font-size: 0.28rem;
+	color: #2cc17b;
+	margin-bottom:0 ;
+}
+.xttm,.xttm2{
+	font-size: 0.24rem;
+	overflow: hidden;
+	color: #999999;
+	margin-bottom:0 ;
+}
+i{
+	font-style:normal;
+}
+.xttm time,.xttm2 time{
+	float: left;
+}
+.xttm span,.xttm2 span{
+	float: right;
+}
+.sjhh .hh{
+	font-size: 0.34rem !important;
+}
+.sjhh .xiaoxi{
+	font-size: 0.3rem;
+	color: #606060;
+	padding: 0.2rem 0;
+}
+.sjhh img{
+	width: 6rem;
+	height: 3.1rem;
+}
+.lypl{
+	color: #363636;
+	font-size: 0.28rem;
+	padding: 0.2rem;
+	border-bottom: 0.01rem solid #f0f0f0;
+}
+.bonode{
+	border-bottom: 0rem;
+}
+.xiaolis{
+	border-bottom: 0.01rem solid #f0f0f0;
+}
+.marps{
+	margin-left: 0.8rem;
+}
+/*底部评论部分*/
+/*底部搜索栏css*/
+.education_fir{width: 100%;border-bottom: 0.01rem solid #ccc; padding: 0.2rem 0;}
+.education_fir input{outline: none;background:#F9F9F9;border: 0.01rem solid #ddd;width:5.56rem;font-size: 0.28rem; margin: 0 auto;padding-left: 0.2rem;height: 0.56rem;display: block;border-radius: 0.1rem;}
+.education_fir img{position: absolute;display: block;width: 0.25rem;height: 0.25rem;top: 0.35rem;left: 0.25rem;}
+.fots{
+	position: fixed;
+	bottom: 0;
+	background:#fff;
+	border-top:0.01rem solid #BEBEBE;
+}
